@@ -4,6 +4,7 @@ from django.db import models
 class Room(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
+    imgUrl = models.URLField(default="https://dummyimage.com/450x300/dee2e6/6c757d.jpg", blank=True)
 
 
 class Message(models.Model):

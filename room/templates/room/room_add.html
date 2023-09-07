@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Add Room{% endblock %}
+
+{% block content %}
+<header class="bg-teal py-5">
+    <div class="container px-4 lg:w-1/4 px-lg-5 my-5">
+      <div class=" text-black">
+        <form method="POST" action="{% url 'room_add' %}" class="px-4 mx-auto">
+            {%csrf_token%}
+
+    <div class = "mb-5">
+
+        <label class = "text-black">Room title</label>
+        <input type = "text" name = "name" class = "w-full mt-2 px-4 py-2 rounded-xl text-black">
+    </div>
+
+    <div class = "mb-5">
+
+        <label class = "text-black">Slug</label>
+        <input type = "text" name = "slug" class = "w-full mt-2 px-4 py-2 rounded-xl text-black">
+    </div>
+    <div class = "mb-5">
+
+        <label class = "text-black">ImageUrl</label>
+        <input type = "url" name = "imgUrl " class = "w-full mt-2 px-4 py-2 rounded-xl text-black">
+    </div>
+
+
+
+    <button type="submit" class="px-5 py-3 rounded-xl text-black bg-white ">Create</button>
+
+
+</form>
+</div>
+</div>
+
+</header>
+
+{% endblock %}
